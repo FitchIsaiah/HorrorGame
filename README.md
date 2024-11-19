@@ -4,7 +4,7 @@
 Horror Game based of DnD/Dungeon Mushi. 
 You are the last member of your adventurer left standing after a devastating blow to your party members by a horrific beast. After getting you and the bodies of your comrades to saftey in the dungeon, you must go find the souls of your compaions still left somewhere in the dungeon. But beware of the monster, he still trying to find you. 
 
-## Features
+## Features/ What needs to be done.
 - Silence Magic/ Light Magic
 - Transversible Maze
 - Eerie Music
