@@ -24,8 +24,8 @@ If you'd like to contribute, please fork the repository and submit a pull reques
 
 
 ## Credits
-- Game Design: Isaiah / Adam 
-- Programming: Isaiah / Adam
+- Game Design: Isaiah / Adam /  Amedeo
+- Programming: Isaiah / Adam / Amedeo
 - Art: Isaiah / Adam
 
 ## Contact
