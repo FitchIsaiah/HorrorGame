@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController controller;
 
     public float speed = 12f;
+    public float sprintSpeed = 18f;
+    public float crouchSpeed = 6f;
     public float gravity = -9.81f;
 
     public Transform groundCheck;
@@ -16,8 +18,19 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundMask;
     public float jumpHeight = 3f;
 
-    Vector3 velocity;
-    bool isGrounded;
+    public float crouchHeight = 1f;
+    public float standHeight = 2f;
+    public float transitionSpeed = 5f;
+
+    private float currentSpeed;
+    private Vector3 velocity;
+    private bool isGrounded;
+
+    private void Start()
+    {
+        currentSpeed = speed;
+    }
+
 
 
     void Update()

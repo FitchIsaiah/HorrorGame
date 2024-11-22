@@ -399,16 +399,20 @@ PrefabInstance:
       value: Wall (6)
       objectReference: {fileID: 0}
     - target: {fileID: 8568162086265587098, guid: 9b7541a7d89d0ca4a968001aff9eab61, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 8.429943
+      objectReference: {fileID: 0}
+    - target: {fileID: 8568162086265587098, guid: 9b7541a7d89d0ca4a968001aff9eab61, type: 3}
       propertyPath: m_LocalPosition.x
       value: 25.53
       objectReference: {fileID: 0}
     - target: {fileID: 8568162086265587098, guid: 9b7541a7d89d0ca4a968001aff9eab61, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.01999998
+      value: -0.01
       objectReference: {fileID: 0}
     - target: {fileID: 8568162086265587098, guid: 9b7541a7d89d0ca4a968001aff9eab61, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -24.06
+      value: -17.98
       objectReference: {fileID: 0}
     - target: {fileID: 8568162086265587098, guid: 9b7541a7d89d0ca4a968001aff9eab61, type: 3}
       propertyPath: m_LocalRotation.w
