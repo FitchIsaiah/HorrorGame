@@ -9,7 +9,7 @@ You are the last member of your adventurer left standing after a devastating blo
 - Transversible Maze
 - Eerie Music
 - Soul Collecting
-- Monster Ai
+- Monster Ai (DnD Beholder)
 
 ## How to Play
 - Use arrow keys to move.
