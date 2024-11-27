@@ -22,9 +22,11 @@ You are the last member of your adventurer left standing after a devastating blo
 
 ## How to Play
 - Use arrow keys to move.
-- Press 'Space' to Crouch.
-- Press 'Control' to Silence.
-- press 'Shift' to cast Light.
+- Press 'Space' to Jump.
+- Press 'C' to Crouch.
+- Press 'Control' to Silence.(Not Done).
+- Press 'Shift' to cast Sprint.(Not Done).
+- Press 'X' to cast Light. (Not Done).
 - Collect souls to gain magic and closer to win the game.
 - Avoid obstacles and enemies.
 
