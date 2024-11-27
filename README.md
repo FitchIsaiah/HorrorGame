@@ -5,11 +5,20 @@ Horror Game based of DnD/Dungeon Mushi.
 You are the last member of your adventurer left standing after a devastating blow to your party members by a horrific beast. After getting you and the bodies of your comrades to saftey in the dungeon, you must go find the souls of your compaions still left somewhere in the dungeon. But beware of the monster, he still trying to find you. 
 
 ## Features/ What needs to be done.
+- Atmopshere Mood
+- Character Ui
+- Sound Effects
 - Silence Magic/ Light Magic
 - Transversible Maze
-- Eerie Music
+- Eerie Music 
 - Soul Collecting
-- Monster Ai (DnD Beholder)
+- Monsters Ai (Goblins & DnD Beholder)
+
+## Whats already done.
+- Character Basic Movement
+- Basic Layout
+- Texture for Walls
+- Smoke Effect
 
 ## How to Play
 - Use arrow keys to move.
