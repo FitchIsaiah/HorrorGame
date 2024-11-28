@@ -45,8 +45,8 @@ public class PlayerMovement : MonoBehaviour
             velocity.y = -2f; 
         }
 
-        HandleSprinting();
-        HandleCrouching();
+        HandleSprintingAndCrouching();
+        
 
 
         float x = Input.GetAxis("Horizontal");
@@ -66,41 +66,101 @@ public class PlayerMovement : MonoBehaviour
 
         controller.Move(velocity * Time.deltaTime);
     }
-    void HandleSprinting()
-    {
-        if (Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(KeyCode.C))
 
+    void HandleSprintingAndCrouching()
+    {
+        // Check if crouching
+        if (Input.GetKey(KeyCode.C))
         {
-            currentSpeed = sprintSpeed;
+            // Enter crouch state
+            controller.height = Mathf.Lerp(controller.height, crouchHeight, Time.deltaTime * transitionSpeed);
+            currentSpeed = crouchSpeed;
+
+            // Adjust camera height
+            cameraTransform.localPosition = Vector3.Lerp(
+                cameraTransform.localPosition,
+                new Vector3(cameraTransform.localPosition.x, crouchHeight / 2, cameraTransform.localPosition.z),
+                Time.deltaTime * transitionSpeed
+            );
         }
         else
         {
-            currentSpeed = speed;
-        }
-    }
-        void HandleCrouching()
-        {
-            if (Input.GetKey(KeyCode.C))
+            // Standing height adjustment
+            controller.height = Mathf.Lerp(controller.height, standHeight, Time.deltaTime * transitionSpeed);
+
+            // Adjust camera back to standing position
+            cameraTransform.localPosition = Vector3.Lerp(
+                cameraTransform.localPosition,
+                new Vector3(cameraTransform.localPosition.x, standHeight / 2, cameraTransform.localPosition.z),
+                Time.deltaTime * transitionSpeed
+            );
+
+            // Sprinting logic (only when not crouching)
+            if (Input.GetKey(KeyCode.LeftShift))
             {
-                controller.height = Mathf.Lerp(controller.height, crouchHeight, Time.deltaTime * transitionSpeed);
-                currentSpeed = crouchSpeed;
-
-            //Smoothly lower the camera
-            cameraTransform.localPosition = Vector3.Lerp(cameraTransform.localPosition, new Vector3(cameraTransform.localPosition.x, crouchHeight / 2, cameraTransform.localPosition.z), Time.deltaTime * transitionSpeed);
-
-
-
+                currentSpeed = sprintSpeed;
             }
             else
             {
-                controller.height = Mathf.Lerp(controller.height, standHeight, Time.deltaTime * transitionSpeed);
                 currentSpeed = speed;
-
-            cameraTransform.localPosition = Vector3.Lerp(cameraTransform.localPosition, new Vector3(cameraTransform.localPosition.x, standHeight / 2, cameraTransform.localPosition.z), Time.deltaTime * transitionSpeed);
-
+            }
         }
-        
-        
-        }
+
+        // Debugging speed to ensure correct logic
+        Debug.Log("Current Speed: " + currentSpeed);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
+
+/*void HandleSprinting()
+{
+    if (Input.GetKey(KeyCode.LeftShift) && !Input.GetKey(KeyCode.C))
+
+    {
+        currentSpeed = sprintSpeed;
+    }
+    else
+    {
+        currentSpeed = speed;
+    }
+}
+    void HandleCrouching()
+    {
+        if (Input.GetKey(KeyCode.C))
+        {
+            controller.height = Mathf.Lerp(controller.height, crouchHeight, Time.deltaTime * transitionSpeed);
+            currentSpeed = crouchSpeed;
+
+        //Smoothly lower the camera
+        cameraTransform.localPosition = Vector3.Lerp(cameraTransform.localPosition, new Vector3(cameraTransform.localPosition.x, crouchHeight / 2, cameraTransform.localPosition.z), Time.deltaTime * transitionSpeed);
+
+
+
+        }
+        else
+        {
+            controller.height = Mathf.Lerp(controller.height, standHeight, Time.deltaTime * transitionSpeed);
+            currentSpeed = speed;
+
+        cameraTransform.localPosition = Vector3.Lerp(cameraTransform.localPosition, new Vector3(cameraTransform.localPosition.x, standHeight / 2, cameraTransform.localPosition.z), Time.deltaTime * transitionSpeed);
+
+    }
+
+
+    }
+*/
+
