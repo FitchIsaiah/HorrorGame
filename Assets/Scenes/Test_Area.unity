@@ -41026,7 +41026,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.6675659, g: 0.735849, b: 0.62824845, a: 0.078431375}
+      maxColor: {r: 0.6777196, g: 0.9056604, b: 0.55108577, a: 0.078431375}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -45855,7 +45855,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.6675659, g: 0.735849, b: 0.62824845, a: 0.078431375}
+      maxColor: {r: 0.6777196, g: 0.9056604, b: 0.55108577, a: 0.078431375}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -60504,6 +60504,10 @@ PrefabInstance:
       value: First Person Player
       objectReference: {fileID: 0}
     - target: {fileID: 3051931019406339513, guid: 1756aec180d530c4ea98254a71e008ed, type: 3}
+      propertyPath: speed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3051931019406339513, guid: 1756aec180d530c4ea98254a71e008ed, type: 3}
       propertyPath: sprintSpeed
       value: 6
       objectReference: {fileID: 0}
@@ -60525,7 +60529,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3177246490854778057, guid: 1756aec180d530c4ea98254a71e008ed, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.81
+      value: 3.28
       objectReference: {fileID: 0}
     - target: {fileID: 3177246490854778057, guid: 1756aec180d530c4ea98254a71e008ed, type: 3}
       propertyPath: m_LocalPosition.z
